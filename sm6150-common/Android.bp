@@ -5363,11 +5363,11 @@ android_app_import {
 }
 
 android_app_import {
-        name: "HotwordEnrollmentOKGoogleHEXAGON",
+	name: "HotwordEnrollmentOKGoogleHEXAGON",
 	owner: "xiaomi",
 	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk",
 	presigned: true,
-        dex_preopt: {
+	dex_preopt: {
 		enabled: false,
 	},
 	privileged: true,
@@ -5375,11 +5375,11 @@ android_app_import {
 }
 
 android_app_import {
-        name: "HotwordEnrollmentXGoogleHEXAGON",
+	name: "HotwordEnrollmentXGoogleHEXAGON",
 	owner: "xiaomi",
 	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk",
 	presigned: true,
-        dex_preopt: {
+	dex_preopt: {
 		enabled: false,
 	},
 	privileged: true,
@@ -5470,6 +5470,13 @@ dex_import {
 }
 
 dex_import {
+	name: "com.android.hotwordenrollment.common.util",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "com.qti.dpmframework",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/com.qti.dpmframework.jar"],
@@ -5555,6 +5562,18 @@ cc_prebuilt_binary {
 	name: "cnd",
 	owner: "xiaomi",
 	srcs: ["proprietary/vendor/bin/cnd"],
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "cnss-daemon",
+	owner: "xiaomi",
+	srcs: ["proprietary/vendor/bin/cnss-daemon"],
 	check_elf_files: false,
 	strip: {
 		none: true,
