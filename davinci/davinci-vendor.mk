@@ -281,7 +281,7 @@ PRODUCT_PACKAGES += \
     libmivendor_module_calibration \
     libmivendor_module_hall \
     libmivendor_module_motor \
-    libmpbase.so_davinci \
+    libmpbase_vendor \
     libremosaic_daemon \
     libremosaiclib \
     libsensorslog \
@@ -296,7 +296,6 @@ PRODUCT_PACKAGES += \
     libvidhance \
     mi.motor.daemon \
     sensors.ssc \
-    cnss-daemon \
     vendor.xiaomi.hardware.motor@1.0-service \
     mi_thermald \
     remosaic_daemon \
